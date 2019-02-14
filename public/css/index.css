@@ -1,0 +1,409 @@
+* {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+.hu-background-color_button-background,
+#hu-message-input .left-arrow,
+.open .keyword-switch,
+#hu-footer-input-mobile .back-button,
+#hu-footer-input-mobile .powered-by-text a,
+#hu-footer-input-mobile .keyword-button,
+#hu-footer-input-mobile .skip-pause-button,
+.Card-catalogue_content_attribute::before,
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside),
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
+  background-color: #0076fe !important;
+}
+
+.hu-border-color_textarea-border {
+  border-color: #0076fe !important;
+}
+
+#hu-messages-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20vh;
+}
+
+#hu-footer {
+  height: 19vh;
+}
+
+.hu-message-text {
+  font-family: "Open Sans", sans-serif;
+}
+
+.hu-messages-wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#scroll-top-fixer {
+  display: block;
+}
+
+.hu-message.user .hu-message-bubble {
+  border-radius: 25px;
+  position: relative;
+  overflow: visible;
+  background-color: #0076fe;
+}
+
+#hu-message-input .left-arrow {
+  background-color: #0076fe;
+}
+
+.hu-fill_textarea-border,
+.hu-textarea-heavy .send svg,
+.hu-textarea-light .send svg,
+#hu-footer-input-mobile .attach svg {
+  fill: #0076fe !important;
+}
+
+.typing-spinner .hu-background-color_accent,
+#hu-bot-progress-bar::after {
+  background-color: #0076fe;
+}
+
+.hu-message.brand .hu-message-bubble {
+  box-shadow: 0 1px 28px 0 rgba(0, 118, 254, 0.4);
+}
+
+.hu-message.user .hu-message-bubble::before {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  width: 0;
+  height: 0;
+  right: -8px;
+  bottom: 15px;
+  border-style: solid;
+  border-width: 10px 10px 0 0;
+  border-color: #0076fe transparent transparent transparent;
+}
+
+#app-landbot .hu-input-menu .include-image-container {
+  height: 60px;
+}
+
+#app-landbot .hu-input-menu .include-image-container .include-image {
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#app-landbot
+  .hu-input-menu
+  .hu-input-menu_button.image
+  .hu-input-menu_button_text {
+  padding: 10px 5px 0;
+  max-width: 80px;
+  min-height: 42px;
+  margin: 0 auto;
+}
+
+#hu-message-input .hu-input-menu-buttons .hu-input-menu_button {
+  padding: 18px;
+  border-radius: 35px;
+  background-color: #0076fe;
+  text-decoration: none;
+}
+
+.hu-message-text {
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+
+#hu-background {
+  display: none;
+}
+
+.hu-message-avatar .hu-message-avatar_img {
+  display: none;
+}
+
+.hu-message-info {
+  margin-right: 0;
+}
+
+.hu-message-bubble {
+  max-width: 100%;
+}
+
+#hu-message-input .hu-input-back {
+  left: -48px;
+}
+
+/* own style */
+
+.landing__txt {
+  font-weight: 500;
+  font-style: normal;
+}
+
+.landing__link {
+  position: relative;
+}
+
+.logo {
+  display: block;
+  width: 250px;
+  height: 80px;
+}
+
+.fi.chains.link-icon {
+  display: none;
+}
+
+.button-text {
+  font-weight: 400;
+}
+
+a[href="https://localhost/link/?messenger=telegram"] .button-text, .txt--weight {
+  text-decoration: none;
+}
+
+html[lang="ru"]
+  #app-landbot
+  .hu-input-menu
+  .hu-input-menu_button.image
+  .hu-input-menu_button_text {
+  max-width: 110px;
+}
+
+a.page_content:hover {
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+
+@media screen and (min-width: 425px) {
+  #hu-footer-input-fixed .hu-input-container,
+  #hu-message-input .hu-input-container {
+    margin: 0 20px 0 44px;
+  }
+
+  #hu-footer-input-fixed,
+  .hu-messages-wrapper {
+    max-width: 550px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  html,
+  body {
+    min-height: 100%;
+    width: 100%;
+    overflow: scroll;
+  }
+
+  .main-page {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  #gui {
+    padding-top: 60px;
+    padding-bottom: 75px;
+  }
+
+  #app-landbot {
+    position: relative;
+    height: calc(100% - 147px);
+  }
+
+  #app-landbot,
+  #app-modules,
+  #gui,
+  #hu-body,
+  #hu-messenger,
+  #hu-messages-container,
+  #hu-messages-container .hu-messages-wrapper {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .hu-message-text {
+    font-size: 13px;
+    text-decoration: none;
+  }
+
+  #hu-footer-input-fixed .hu-input-container,
+  #hu-message-input .hu-input-container {
+    margin: 0 0 81px;
+  }
+
+  .hu-input-menu-buttons {
+    flex-wrap: nowrap;
+  }
+
+  #hu-message-input .left-arrow {
+    opacity: 1;
+    display: block;
+    transform: rotate(-360deg) scale(1) translateY(0px);
+    transition: none;
+  }
+
+  #hu-message-input .back-text {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .landing__txt {
+    font-size: 12px;
+  }
+
+  #hu-footer-input-fixed .hu-input-box,
+  #hu-message-input .hu-input-box {
+    padding-bottom: 100px;
+    justify-content: space-around;
+  }
+
+  #hu-messages-container {
+    margin-top: 0;
+    align-items: flex-start;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .landing__header {
+    height: 60px;
+    background-color: white;
+  }
+
+  .landing__header .wrap {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .banner.landing__txt {
+    display: inline-block;
+    width: 79%;
+    font-size: 12px;
+    letter-spacing: -0.3px;
+  }
+
+  .banner .landing__link {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  .logo {
+    width: 140px;
+    height: 40px;
+  }
+
+  .wrap--right {
+    min-width: 50px;
+  }
+
+  .hu-message-info {
+    display: none;
+    margin-right: 0;
+  }
+
+  #hu-footer {
+    height: 14vh;
+  }
+
+  .hu-input-body {
+    margin-left: 60px;
+  }
+
+  #app-landbot .hu-input-header:empty + .hu-input-body {
+    margin-left: 0;
+  }
+
+  #hu-message-input .hu-input-back {
+    left: 0;
+  }
+
+  html[lang="ru"] .banner.landing__txt {
+    width: 300px;
+  }
+
+  html[lang="ru"] .external-nav {
+    width: 200px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #hu-footer-input-fixed .hu-input-container,
+  #hu-message-input .hu-input-container {
+    margin: 0 30px;
+  }
+
+  .button-text {
+    font-size: 12px;
+  }
+
+  .hu-input-menu-buttons {
+    flex-wrap: wrap;
+    padding-top: 25px;
+  }
+
+  .hu-input-menu_help.hu-input-menu-info {
+    display: none;
+  }
+
+  .hu-input-menu_button {
+    padding: 13px;
+  }
+
+  #hu-footer-input-fixed .hu-input-container,
+  #hu-message-input .hu-input-container {
+    margin: 0 10px;
+  }
+
+  #hu-message-input.enabled .hu-input-back {
+    display: block;
+    top: 25px;
+  }
+
+  #hu-message-input .hu-input-menu-buttons .hu-input-menu_button {
+    padding: 5px;
+    min-height: 35px;
+  }
+
+  .hu-message.user .hu-message-bubble {
+    padding: 15px 20px;
+  }
+
+  #app-landbot
+    .hu-input-menu
+    .hu-input-menu_button.image
+    .hu-input-menu_button_text {
+    padding: 0 5px 0;
+  }
+
+  #app-landbot .hu-input-menu_button {
+    width: calc(33% - 6px);
+    min-width: 110px;
+  }
+
+  #app-landbot .hu-input-body {
+    margin-left: 45px;
+  }
+
+  #app-landbot #hu-footer-input-fixed,
+  .hu-messages-wrapper {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .landing__txt {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "izibits-landingpage",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petuhovskiy/izibits-landingpage.git"
+  },
+  "author": "Arthur Petukhovsky <petuhovskiy@yandex.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petuhovskiy/izibits-landingpage/issues"
+  },
+  "homepage": "https://github.com/petuhovskiy/izibits-landingpage#readme"
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Message me everything – iziBits</title>
+    <!-- lang -->
+    <link rel="alternate" hreflang="x-default" href="http://localhost" />
+    <link rel="alternate" hreflang="en" href="http://localhost" />
+    <link rel="alternate" hreflang="ru" href="http://localhost/ru" />
+
+    <link
+      rel="preload"
+      href="/fonts/open_sans/OpenSans-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/temp.min.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body class="main-page">
+    <header class="landing__header">
+      <div class="wrap">
+        <div class="mobile-menu">
+          <button class="burger js-burger" type="button">
+            <span></span>
+          </button>
+          <div class="mobile-nav">
+            <p class="mobile-nav__item mobile__item--active">
+              <span class="page_content">Home</span>
+            </p>
+            <a class="mobile-nav__item" href="/news"
+              ><span class="page_content">News</span>
+            </a>
+            <a class="mobile-nav__item" href="/legal"
+              ><span class="page_content">Legal</span>
+            </a>
+            <a class="mobile-nav__item" href="/smi"
+              ><span class="page_content">Media</span>
+            </a>
+          </div>
+        </div>
+        <a href="https://localhost" class="logo">
+          <img src="/img/logo.png" height="75" />
+        </a>
+        <nav class="main-menu">
+          <a class="main-menu__item" href="/news"
+            ><span class="page_content">News</span>
+          </a>
+          <a class="main-menu__item has-submenu" href="/legal"
+            ><span class="page_content">Legal</span>
+          </a>
+          <a class="main-menu__item has-submenu" href="/smi"
+            ><span class="page_content">Media</span>
+          </a>
+        </nav>
+        <div class="select-lang lang-hover">
+          <div class="select-lang__active js-mobile-click">en</div>
+          <ul class="select-lang__list">
+            <li class="select-lang__item select-lang__selected">
+              <a href="#" class="js-lang noquery">en</a>
+            </li>
+            <li class="select-lang__item ">
+              <a href="#" class="js-lang noquery">ru</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main id="app-landing-bot" class="landing__main"></main>
+    <footer class="landing__footer">
+      <div class="wrap">
+        <div class="footer__item">
+          <div
+            class="ya-share2"
+            data-services="facebook,twitter,gplus,vkontakte, sinaWeibo"
+            data-limit="3"
+            data-lang="en"
+            data-popup-direction="top"
+          ></div>
+        </div>
+        <div class="footer__item">
+          <p>
+            <span class="page_content">iziBits is already on Telegram!</span>
+            <a
+              href="https://t.me/izibits_bot"
+              class="landing__link page_content"
+              target="_blank"
+            >
+              Try it now!
+            </a>
+          </p>
+        </div>
+        <div class="footer__item">
+          <small class="copyrite">©2017-2019 IZIBITS OÜ</small>
+          <a
+            class="chtx-licens"
+            target="_blank"
+            href="https://mtr.mkm.ee/juriidiline_isik/221174"
+          >
+            <small>Licenses FRK000298 FVR000357</small>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <aside class="cookies-popup js-popup" lang="en">
+      <p>
+        <span class="page_content"
+          >This website uses cookies to ensure you have the best experience. By
+          continuing to use this site, you consent to our</span
+        >
+        <a href="https://localhost/legal/#cookies" class="page_content"
+          >Cookie policy </a
+        >.
+        <span class="page_content"
+          >You can disable cookies at any time, by changing your browser
+          settings.
+        </span>
+        <button type="button" class="js-btn-close btn page_content">
+          Close
+        </button>
+      </p>
+    </aside>
+
+    <script charset="UTF-8" src="/js/main.js"></script>
+  </body>
+</html>
