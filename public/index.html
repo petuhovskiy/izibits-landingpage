@@ -8,9 +8,9 @@
     />
     <title>Message me everything – iziBits</title>
     <!-- lang -->
-    <link rel="alternate" hreflang="x-default" href="http://localhost" />
-    <link rel="alternate" hreflang="en" href="http://localhost" />
-    <link rel="alternate" hreflang="ru" href="http://localhost/ru" />
+    <link rel="alternate" hreflang="x-default" href="/" />
+    <link rel="alternate" hreflang="en" href="/" />
+    <link rel="alternate" hreflang="ru" href="/ru" />
 
     <link
       rel="preload"
@@ -50,14 +50,14 @@
           <img src="/img/logo.png" height="75" />
         </a>
         <nav class="main-menu">
-          <a class="main-menu__item" href="/news"
-            ><span class="page_content">News</span>
+          <a class="main-menu__item" href="/news">
+            <span class="page_content">News</span>
           </a>
-          <a class="main-menu__item has-submenu" href="/legal"
-            ><span class="page_content">Legal</span>
+          <a class="main-menu__item has-submenu" href="/legal">
+            <span class="page_content">Legal</span>
           </a>
-          <a class="main-menu__item has-submenu" href="/smi"
-            ><span class="page_content">Media</span>
+          <a class="main-menu__item has-submenu" href="/smi">
+            <span class="page_content">Media</span>
           </a>
         </nav>
         <div class="select-lang lang-hover">
@@ -73,7 +73,11 @@
         </div>
       </div>
     </header>
-    <main id="app-landing-bot" class="landing__main"></main>
+    <main id="app-landing-bot" class="landing__main">
+      <noscript>
+        You need to enable JavaScript to run this app. (for now)
+      </noscript>
+    </main>
     <footer class="landing__footer">
       <div class="wrap">
         <div class="footer__item">
@@ -115,7 +119,7 @@
           This website uses cookies to ensure you have the best experience. By
           continuing to use this site, you consent to our
         </span>
-        <a href="https://localhost/legal/#cookies" class="page_content">
+        <a href="legal/#cookies" class="page_content">
           Cookie policy
         </a>
         .
@@ -129,6 +133,6 @@
       </p>
     </aside>
 
-    <script charset="UTF-8" src="/js/main.js"></script>
+    <script charset="UTF-8" src="dist/bundle.js"></script>
   </body>
 </html>
