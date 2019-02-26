@@ -1,5 +1,5 @@
-let lang = "en"
+let lang = "en";
 
 if (window.location.href.endsWith("/ru")) {
-    lang = "ru"
+    lang = "ru";
 }
