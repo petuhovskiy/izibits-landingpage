@@ -4,9 +4,18 @@ import BotButtons from "./BotButtons";
 import BotButton from "./BotButton";
 import BotBody from "./BotBody";
 import UserMessage from "./UserMessage";
+import ScriptedLogic from "./logic/ScriptedLogic";
+import BotDrawer from "./BotDrawer";
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.logic = new ScriptedLogic();
+    }
+
     render() {
+        return <BotDrawer logic={this.logic} />;
+
         const msg = `Привет! 👋 Добро пожаловать в  - бот-сервис по покупке и продаже биткоина, криптовалют и токенов. Автоматический бот выступает третьей стороной, гарантирующей сделки между людьми. Что дальше?`;
         return (
             <BotBody>
