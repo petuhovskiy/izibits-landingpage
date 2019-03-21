@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import BotTimeInfo from "./BotTimeInfo";
+import Tr from "./tr/Tr";
 
 class BotMessage extends Component {
     render() {
@@ -27,7 +28,7 @@ class BotMessage extends Component {
                                         display: "inline-block",
                                     }}
                                 >
-                                    {this.props.children}
+                                    <Tr lkey={this.props.content.text} />
                                 </p>
                             </div>
                         </div>

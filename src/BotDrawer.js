@@ -37,12 +37,12 @@ class BotDrawer extends Component {
 
         // construct messages
         // TODO: time
-        let messages = state.messages.map(it => {
+        let messages = state.messages.map((it, i) => {
             if (it.from == "site") {
-                return <BotMessage>{it.content}</BotMessage>;
+                return <BotMessage key={i} content={it.content} />;
             }
             if (it.from == "user") {
-                return <UserMessage>{it.content}</UserMessage>;
+                return <UserMessage key={i} content={it.content} />;
             }
             return null;
         });
@@ -53,10 +53,12 @@ class BotDrawer extends Component {
         if (state.buttons) {
             buttons = (
                 <BotButtons>
-                    {state.buttons.map(it => (
-                        <BotButton onClick={() => it.action(it.text)}>
-                            {it.text}
-                        </BotButton>
+                    {state.buttons.map((it, i) => (
+                        <BotButton
+                            key={i}
+                            onClick={() => it.action(it.text)}
+                            content={it}
+                        />
                     ))}
                 </BotButtons>
             );

@@ -33,41 +33,41 @@
           </button>
           <div class="mobile-nav">
             <p class="mobile-nav__item mobile__item--active">
-              <span class="page_content">Home</span>
+              <span class="page_content" tr-data="menu-home">Home</span>
             </p>
             <a class="mobile-nav__item" href="/news"
-              ><span class="page_content">News</span>
+              ><span class="page_content" tr-data="menu-news">News</span>
             </a>
             <a class="mobile-nav__item" href="/legal"
-              ><span class="page_content">Legal</span>
+              ><span class="page_content" tr-data="menu-legal">Legal</span>
             </a>
             <a class="mobile-nav__item" href="/smi"
-              ><span class="page_content">Media</span>
+              ><span class="page_content" tr-data="menu-media">Media</span>
             </a>
           </div>
         </div>
-        <a href="https://localhost" class="logo">
+        <a href="/" class="logo">
           <img src="/img/logo.png" height="75" />
         </a>
         <nav class="main-menu">
           <a class="main-menu__item" href="/news">
-            <span class="page_content">News</span>
+            <span class="page_content" tr-data="menu-news">News</span>
           </a>
           <a class="main-menu__item has-submenu" href="/legal">
-            <span class="page_content">Legal</span>
+            <span class="page_content" tr-data="menu-legal">Legal</span>
           </a>
           <a class="main-menu__item has-submenu" href="/smi">
-            <span class="page_content">Media</span>
+            <span class="page_content" tr-data="menu-media">Media</span>
           </a>
         </nav>
         <div class="select-lang lang-hover">
-          <div class="select-lang__active js-mobile-click">en</div>
+          <div class="select-lang__active js-mobile-click" tr-data="lang">en</div>
           <ul class="select-lang__list">
             <li class="select-lang__item select-lang__selected">
-              <a href="#" class="js-lang noquery">en</a>
+              <a href="#" class="js-lang noquery" onclick="switchLang('en')">en</a>
             </li>
             <li class="select-lang__item ">
-              <a href="#" class="js-lang noquery">ru</a>
+              <a href="#" class="js-lang noquery" onclick="switchLang('ru')">ru</a>
             </li>
           </ul>
         </div>
@@ -133,6 +133,8 @@
       </p>
     </aside>
 
+    <script charset="UTF-8" src="tr.map.js"></script>
+    <script charset="UTF-8" src="bot.script.js"></script>
     <script charset="UTF-8" src="dist/bundle.js"></script>
   </body>
 </html>

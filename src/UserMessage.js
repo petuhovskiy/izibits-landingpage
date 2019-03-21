@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import BotTimeInfo from "./BotTimeInfo";
+import Tr from "./tr/Tr";
 
 class UserMessage extends Component {
     render() {
@@ -11,7 +12,7 @@ class UserMessage extends Component {
                         <div className="lb-message-content">
                             <div className="lb-message-bubble lb-position-relative lb-background-color_user-message-background">
                                 <p className="lb-message-text lb-color_user-message-text">
-                                    {this.props.children}
+                                    <Tr lkey={this.props.content.text} />
                                 </p>
                             </div>
                         </div>

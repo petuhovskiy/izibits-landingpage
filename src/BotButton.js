@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Tr from "./tr/Tr";
 
 class BotButton extends Component {
     render() {
@@ -11,7 +12,7 @@ class BotButton extends Component {
             >
                 <div className="lb-input-menu_button_text lb-display-flex lb-align-center lb-a-center">
                     <span className="button-text lb-flex-1">
-                        {this.props.children}
+                        <Tr lkey={this.props.content.text} />
                     </span>
                     <i className="fi chains link-icon lb-s-16" />
                 </div>
