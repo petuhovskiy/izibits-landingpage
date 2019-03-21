@@ -1,0 +1,20 @@
+version: "3.3"
+services:
+  admin-server:
+    build: ./admin-server
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: ./client/public/tr.map.js
+        target: /tr.map.js
+    ports:
+      - 8080:8080
+  client-static:
+    build: ./client
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: ./client/public/tr.map.js
+        target: /usr/share/nginx/html/tr.map.js
+    ports:
+      - 80:80
