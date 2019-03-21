@@ -1,4 +1,4 @@
-# izibits-landingpage
+# izibits-landingpage client
 
 ## Start dev server
 
