@@ -55,8 +55,8 @@ class BotDrawer extends Component {
                 <BotButtons>
                     {state.buttons.map((it, i) => (
                         <BotButton
-                            key={i}
                             onClick={() => it.action(it.text)}
+                            key={Math.random()}
                             content={it}
                         />
                     ))}

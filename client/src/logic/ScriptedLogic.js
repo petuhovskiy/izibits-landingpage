@@ -67,7 +67,14 @@ class ScriptedLogic {
                     text: msg,
                 },
             });
-            if (act.act == "next-state") {
+            if (
+                act.act == "next-state" ||
+                act.act == "url" ||
+                act.act == "startOver"
+            ) {
+                if (act.act == "startOver") {
+                    this.messages = [];
+                }
                 console.log("going to next state", act.nextState);
                 this.goState(act.nextState);
             } else {
@@ -80,10 +87,14 @@ class ScriptedLogic {
         const buttons = [];
         for (let i = 0; i < this.state.buttons.length; i++) {
             const btn = this.state.buttons[i];
-            buttons.push({
-                text: btn.text,
-                action: this.preact(btn),
-            });
+            buttons.push(
+                Object.assign(
+                    {
+                        action: this.preact(btn),
+                    },
+                    btn
+                )
+            );
         }
 
         return buttons;

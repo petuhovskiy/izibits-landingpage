@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Tr from "./tr/Tr";
 
 class BotButtons extends Component {
     render() {
@@ -16,12 +17,8 @@ class BotButtons extends Component {
                         <div className="lb-input-header" />
                         <div className="lb-input-body">
                             <div className="lb-input-menu lb-position-relative">
-                                <span
-                                    className="lb-input-menu_help lb-input-menu-info lb-display-block lb-not-selectable lb-s-10 lb-color_contrast lb-t-uppercase"
-                                    hash="1586141726"
-                                    lang="ru"
-                                >
-                                    Выберите действие
+                                <span className="lb-input-menu_help lb-input-menu-info lb-display-block lb-not-selectable lb-s-10 lb-color_contrast lb-t-uppercase">
+                                    <Tr lkey="choose-an-option" />
                                 </span>
                                 <div className="lb-input-menu-buttons lb-display-flex lb-flex-wrap ">
                                     {this.props.children}

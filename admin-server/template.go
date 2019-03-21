@@ -38,7 +38,8 @@ const htmlHead = `
           .then(obj => {
             alert(obj.Text);
             console.log(obj);
-            window.location.href += "#num-" + obj.Num;
+            location.hash = '#num-' + obj.Num;
+            // window.location.href += "#num-" + obj.Num;
             location.reload();
           })
       }

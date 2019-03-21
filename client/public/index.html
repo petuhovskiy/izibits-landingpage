@@ -64,10 +64,10 @@
           <div class="select-lang__active js-mobile-click" tr-data="lang">en</div>
           <ul class="select-lang__list">
             <li class="select-lang__item select-lang__selected">
-              <a href="#" class="js-lang noquery" onclick="switchLang('en')">en</a>
+              <a href="#" class="js-lang noquery">en</a>
             </li>
             <li class="select-lang__item ">
-              <a href="#" class="js-lang noquery" onclick="switchLang('ru')">ru</a>
+              <a href="#" class="js-lang noquery">ru</a>
             </li>
           </ul>
         </div>
@@ -91,12 +91,13 @@
         </div>
         <div class="footer__item">
           <p>
-            <span class="page_content">iziBits is already on Telegram!</span>
+            <span class="page_content" tr-data="is-already-on-telegram">iziBits is already on Telegram!</span>
             <a
-              href="https://t.me/izibits_bot"
+              href="https://t.me/izibits3_snapshot_bot"
               class="landing__link page_content"
               target="_blank"
-            >
+              tr-data="try-it-now"
+              >
               Try it now!
             </a>
           </p>
@@ -133,6 +134,38 @@
       </p>
     </aside>
 
+    <script>
+
+      // language selector
+      document.querySelectorAll(".select-lang__item")
+        .forEach(it => {
+          it.onclick = () => {
+            let lang = it.querySelector("a").text;
+            switchLang(lang);
+            document.querySelector(".select-lang__selected").classList.remove("select-lang__selected")
+            it.className += " select-lang__selected";
+          }
+        })
+
+      // $(".select-lang__item").click(function () {
+
+      //   let lang = $(this).find("a").text();
+
+      //   if (lang_common !== lang) {
+      //       lang_old = lang_common;
+      //       lang_common = $(this).find("a").text();
+      //       $('.select-lang__item').removeClass('select-lang__selected');
+      //       $(this).addClass('select-lang__selected');
+      //       $('.select-lang__active').html(lang + ' ' + '<span class="flag flag--' + lang + '"></span>');
+      //       $('html').attr('lang', lang_common);
+      //       $('.cookies-popup').attr('lang', lang_common);
+      //       setCookie('lang', lang_common, {path: '/'});
+      //       updateURL(lang);
+      //   }
+
+      //   $('.js-mobile-hover').removeClass('mobile-lang-open');
+      // });
+    </script>
     <script charset="UTF-8" src="tr.map.js"></script>
     <script charset="UTF-8" src="bot.script.js"></script>
     <script charset="UTF-8" src="dist/bundle.js"></script>

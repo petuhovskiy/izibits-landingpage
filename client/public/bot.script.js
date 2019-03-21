@@ -11,7 +11,7 @@ window.botscriptmap = {
                 {
                     text: "try-now",
                     act: "next-state",
-                    nextState: "lets-start",
+                    nextState: "try-it",
                 },
                 {
                     text: "learn-more",
@@ -43,20 +43,40 @@ window.botscriptmap = {
             messages: [
                 {
                     text: "lets-start",
-                }
+                },
             ],
             buttons: [
                 {
                     text: "telegram-option",
-                    // TODO: icon and act
+                    img: "/img/telegram-button.png",
+                    act: "url",
+                    url: "https://t.me/izibits3_snapshot_bot",
+                    nextState: "start-over",
                 },
                 {
                     text: "viber-option",
+                    img: "/img/viber-button.png",
                     // TODO: icon and act
                 },
                 {
                     text: "facebook-option",
+                    img: "/img/facebook-button.png",
                     // TODO: icon and act
+                },
+            ],
+        },
+        {
+            key: "start-over",
+            messages: [
+                {
+                    text: "want-start-again",
+                },
+            ],
+            buttons: [
+                {
+                    text: "start-again",
+                    act: "startOver",
+                    nextState: "init",
                 },
             ],
         },
