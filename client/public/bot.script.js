@@ -56,12 +56,48 @@ window.botscriptmap = {
                 {
                     text: "viber-option",
                     img: "/img/viber-button.png",
-                    // TODO: icon and act
+                    act: "next-state",
+                    nextState: "viber-dev",
                 },
                 {
                     text: "facebook-option",
                     img: "/img/facebook-button.png",
-                    // TODO: icon and act
+                    act: "next-state",
+                    nextState: "facebook-dev",
+                },
+            ],
+        },
+        {
+            key: "facebook-dev",
+            messages: [
+                {
+                    text: "facebook-dev",
+                },
+            ],
+            buttons: [
+                {
+                    text: "try-telegram",
+                    img: "/img/telegram-button.png",
+                    act: "url",
+                    url: "https://t.me/izibits3_snapshot_bot",
+                    nextState: "start-over",
+                },
+            ],
+        },
+        {
+            key: "viber-dev",
+            messages: [
+                {
+                    text: "viber-dev",
+                },
+            ],
+            buttons: [
+                {
+                    text: "try-telegram",
+                    img: "/img/telegram-button.png",
+                    act: "url",
+                    url: "https://t.me/izibits3_snapshot_bot",
+                    nextState: "start-over",
                 },
             ],
         },
@@ -75,7 +111,7 @@ window.botscriptmap = {
             buttons: [
                 {
                     text: "start-again",
-                    act: "startOver",
+                    act: "start-over",
                     nextState: "init",
                 },
             ],

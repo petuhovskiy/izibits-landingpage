@@ -4,6 +4,27 @@ import Tr from "./tr/Tr";
 
 class BotMessage extends Component {
     render() {
+        let content = null;
+        if (this.props.content.isSpinner) {
+            content = (
+                <div className="typing-spinner" style={{ opacity: 1 }}>
+                    <div className="ball lb-background-color_accent" />
+                    <div className="ball lb-background-color_accent" />
+                    <div className="ball lb-background-color_accent" />
+                </div>
+            );
+        } else {
+            content = (
+                <p
+                    className="lb-message-text lb-color_bot-message-text"
+                    style={{
+                        display: "inline-block",
+                    }}
+                >
+                    <Tr lkey={this.props.content.text} />
+                </p>
+            );
+        }
         return (
             <div className="lb-message brand animate left-in">
                 <div className="lb-message-container">
@@ -17,19 +38,7 @@ class BotMessage extends Component {
                                     height: "auto",
                                 }}
                             >
-                                <div className="typing-spinner">
-                                    <div className="ball lb-background-color_accent" />
-                                    <div className="ball lb-background-color_accent" />
-                                    <div className="ball lb-background-color_accent" />
-                                </div>
-                                <p
-                                    className="lb-message-text lb-color_bot-message-text"
-                                    style={{
-                                        display: "inline-block",
-                                    }}
-                                >
-                                    <Tr lkey={this.props.content.text} />
-                                </p>
+                                {content}
                             </div>
                         </div>
                     </div>

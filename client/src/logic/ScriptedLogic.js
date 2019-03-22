@@ -3,6 +3,7 @@ class ScriptedLogic {
         this.script = script;
         this.messages = [];
         this.subscribers = [];
+        this.animationInProgress = false;
 
         this.goState(this.script.initState);
     }
@@ -25,17 +26,40 @@ class ScriptedLogic {
             alert(newState + " not found");
             return;
         }
-        this.state = state;
 
-        for (let i = 0; i < this.state.messages.length; i++) {
-            const msg = this.state.messages[i];
-            this.messages.push({
-                from: "site",
-                content: msg,
-            });
+        if (this.animationInProgress) {
+            console.log("something is wrong");
+            return;
         }
 
+        this.animationInProgress = true;
+        this.state = state;
         this.stateKey = newState;
+
+        (async () => {
+            for (let i = 0; i < this.state.messages.length; i++) {
+                this.messages.push({
+                    from: "site",
+                    content: {
+                        isSpinner: true,
+                    },
+                });
+                this.fireUpdate();
+
+                await new Promise(resolve => setTimeout(resolve, 600));
+                this.messages.pop();
+
+                const msg = this.state.messages[i];
+                this.messages.push({
+                    from: "site",
+                    content: msg,
+                });
+                this.fireUpdate();
+            }
+
+            this.animationInProgress = false;
+            this.fireUpdate();
+        })();
 
         this.fireUpdate();
     }
@@ -61,6 +85,10 @@ class ScriptedLogic {
 
     preact(act) {
         return msg => {
+            if (this.animationInProgress) {
+                console.log("warn: animation in progress", act, msg);
+                return;
+            }
             this.messages.push({
                 from: "user",
                 content: {
@@ -70,9 +98,9 @@ class ScriptedLogic {
             if (
                 act.act == "next-state" ||
                 act.act == "url" ||
-                act.act == "startOver"
+                act.act == "start-over"
             ) {
-                if (act.act == "startOver") {
+                if (act.act == "start-over") {
                     this.messages = [];
                 }
                 console.log("going to next state", act.nextState);
@@ -84,6 +112,10 @@ class ScriptedLogic {
     }
 
     getButtons() {
+        if (this.animationInProgress) {
+            return null;
+        }
+
         const buttons = [];
         for (let i = 0; i < this.state.buttons.length; i++) {
             const btn = this.state.buttons[i];

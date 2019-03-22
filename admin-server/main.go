@@ -124,9 +124,7 @@ func renderAdmin(w http.ResponseWriter, r *http.Request) {
 		}
 		sort.Strings(keys)
 
-		if _, ok := v["key"]; ok {
-			keys = append([]string{"key"}, keys...)
-		}
+		keys = append([]string{"key"}, keys...)
 
 		for _, k := range keys {
 			val := v[k]

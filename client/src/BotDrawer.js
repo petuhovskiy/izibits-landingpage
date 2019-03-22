@@ -72,5 +72,13 @@ class BotDrawer extends Component {
             </BotBody>
         );
     }
+
+    componentDidUpdate() {
+        // scrool to the end
+        const fixer = document.querySelector("#scroll-bottom-fixer");
+        if (fixer) {
+            fixer.scrollIntoView({ behavior: "smooth" });
+        }
+    }
 }
 export default BotDrawer;
