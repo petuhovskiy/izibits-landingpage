@@ -7,13 +7,6 @@ class Tr extends Component {
     render() {
         const html = translate(this.props.lkey, this.context);
         return new Parser().parse(html);
-        // return (
-        //     <React.Fragment
-        //         dangerouslySetInnerHTML={{
-        //             __html: translate(this.props.lkey, this.context),
-        //         }}
-        //     />
-        // );
     }
 }
 
